@@ -28,18 +28,8 @@ const solution = (board) => {
     let safetyField = Array(board.length).fill(Array(board.length).fill([])).map((arr,y)=>arr.map((_,x)=>[x,y]));
     return safetyField.flat().filter(data=> !unsafetyField.reduce((result,location)=>location[0]==data[0]&&location[1]==data[1]?true:result,false)).length;
 }
-
-// console.log(solution([[1, 1, 0, 0, 0],
-//                     [1, 1, 0, 0, 0],
-//                     [0, 0, 0, 1, 1],
-//                     [0, 0, 0, 1, 1],
-//                     [0, 0, 0, 0, 0]]))
-// console.log(solution([[1, 0, 1], [1, 0, 0], [1, 0, 0]]));
-// console.log(solution([[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,1]]));
-// console.log(solution([[0, 0, 1], [0, 0, 0], [0, 0, 0]]));
-// console.log(solution([[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 0, 0]]))
-// console.log(solution([[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 1, 1, 0], [0, 0, 0, 0, 0]]))
-
-console.log(solution([[1, 0, 0],
-    [0, 1, 0],
-    [0, 0, 1]]))
+console.log(solution([[1, 0, 1], [1, 0, 0], [1, 0, 0]]));
+console.log(solution([[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,1]]));
+console.log(solution([[0, 0, 1], [0, 0, 0], [0, 0, 0]]));
+console.log(solution([[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 0, 0]]))
+console.log(solution([[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 1, 1, 0], [0, 0, 0, 0, 0]]))
