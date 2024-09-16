@@ -1,0 +1,1 @@
+const solution = (n) => Array(n).fill().map((_,index)=>index+1).filter(num=>num%2==1);
